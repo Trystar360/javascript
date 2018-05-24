@@ -22,6 +22,8 @@ function map (num, in_min, in_max, out_min, out_max) {
     elmnt = document.getElementById("bod");
       scrlH = elmnt.scrollHeight-window.innerHeight;
         //console.log(getScroll());
+        var opacity = map(getScroll(),0,200,0,1);
+
         var w = map(getScroll(),0,100,100,0);
         document.getElementById("navv").style.width = w + "%";
 
@@ -33,9 +35,11 @@ function map (num, in_min, in_max, out_min, out_max) {
         if(uses < 0)
         uses = 0;
         document.getElementById("uses").style.left = uses + "px";
+        document.getElementById("uses").style.opacity = opacity;
 
         var facts = map(getScroll(),0,200,200,0);
         if(facts < 0)
         facts = 0;
         document.getElementById("facts").style.right = uses + "px";
+        document.getElementById("facts").style.opacity = opacity;
    }
