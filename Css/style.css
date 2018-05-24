@@ -1,0 +1,29 @@
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+#imageDiv{
+  position: fixed;
+  top: 102px;
+}
+#navv{
+  height: 100px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+#logo-container{
+  position: relative;
+  top: 15px;;
+}
+#uses{
+  position: relative;
+}
+
+#facts{
+  position: relative;
+}
