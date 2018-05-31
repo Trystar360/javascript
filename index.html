@@ -1,116 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta charset="utf-8">
     <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-  <title>Starter Template - Materialize</title>
+    <title>Javascript</title>
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
+
 <body id="bod">
-  <nav class="amber accent-2" id="navv" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Javascript</a>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center yellow-text text-accent-4">Javascript</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Ive used Javascript to rotate this photo acording to the position of the mouse.</h5>
-      </div>
-      <div class="row center">
-        <a href="show.html" id="download-button" class="btn-large waves-effect waves-light orange">Show Me!</a>
-      </div>
-      <br><br>
+    <div id="mainBod">
+        <nav class="amber accent-2" id="navv" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="#" class="brand-logo">Javascript</a>
+        </nav>
+        <div class="section no-pad-bot" id="index-banner">
+            <div class="container">
+                <br>
+                <br>
+                <h1 class="header center yellow-text text-accent-4">Javascript</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light">Javascript is a high-level, interpreted programming language.</h5>
+                </div>
+                <div class="row center">
+                    <a  id="clickBtn" onclick="clicked()" class="btn-large waves-effect waves-light orange">Click Me!</a>
+                </div>
+                <br>
+                <br>
 
-    </div>
-  </div>
-<div id="imageDiv"><img id="jsImg" src="javascript_logo.png" alt=""></div>
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4" id="uses">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Uses</h5>
-
-            <p class="light">One of the most common uses of javascript is wwith with HTML and CSS to create websites. The javascript is usually the part that makes a website interactive</p>
-          </div>
+            </div>
+        </div>
+        <div id="imageDiv">
+            <img id="jsImg" src="javascript_logo.png" alt="">
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">History</h5>
+        <div class="container">
+            <div class="section">
 
-            <p class="light">Javascript was originally called LiveScript when it was first released. It was developed by Netscape Communications. Netscape Communications had a the goal of integrating java into their browser to make it more dynamic. Instead they decided to create a scripting language that was similar to java. And three months after the relase 0f LiveScript, in December 1995, Javascript was officially released.</p>
-          </div>
+                <!--   Icon Section   -->
+                <div class="row">
+                    <div class="col s12 m4" id="uses">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text">
+                                <i class="material-icons">flash_on</i>
+                            </h2>
+                            <h5 class="center">Uses</h5>
+
+                            <p class="light">One of the most common uses of javascript is with with HTML and CSS to create websites. The javascript
+                                is usually the part that makes a website interactive. But you can make it do many more things.</p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text">
+                                <i class="material-icons">group</i>
+                            </h2>
+                            <h5 class="center">History</h5>
+
+                            <p class="light">Javascript was originally called LiveScript when it was first released. It was developed by Netscape
+                                Communications. Netscape Communications had a the goal of integrating java into their browser
+                                to make it more dynamic. Instead they decided to create a scripting language that was similar
+                                to java. And three months after the relase 0f LiveScript, in December 1995, Javascript was
+                                officially released.</p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4" id="other">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text">
+                                <i class="material-icons">settings</i>
+                            </h2>
+                            <h5 class="center">Other Uses</h5>
+
+                            <p class="light">Shortly after web based javascript was released, Serverside javascript was released. Which is just used for serverside funcrions.</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="row center">
+                    <a  id="clickBtn" onclick="unhide()" class="btn-large waves-effect waves-light orange">Click Me!</a>
+                </div>
+                <div id="hidden">
+                    <div class="row">
+                        <div class="col s12 m6">
+                          <div class="card amber accent-2">
+                            <div class="card-content white-text">
+                              <span class="card-title">Uses Today</span>
+                              <p>Today javascript is mainly used on the web for various things like computing or visuals.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col s12 m6">
+                          <div class="card amber accent-2">
+                            <div class="card-content white-text">
+                              <span class="card-title">In The Future</span>
+                              <p>As of now its looking like javascript will continue to grow in popularity and use.</p>
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col s12 m6">
+                              <div class="card amber accent-2">
+                                <div class="card-content white-text">
+                                  <span class="card-title">Advantages</span>
+                                  <p>Javascript has alot of advantages. here are some of them</p>
+                                    <div class="row">
+                                        <div class="col">
+                                            <ul>
+                                                <li>Excecuted on client side</li>
+                                                <li>Easy to learn and use</li>
+                                                <li>Relativly fast</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col s12 m6">
+                              <div class="card amber accent-2">
+                                <div class="card-content white-text">
+                                  <span class="card-title">Disadvantages</span>
+                                  <div class="row">
+                                    <div class="col">
+                                        <ul>
+                                            <li>Security Issues</li>
+                                            <li>Javascript rendering varies</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            </div>
+                </div>
+                
+            </div>
+            <br>
+            <br>
         </div>
 
-        <div class="col s12 m4" id="facts"> 
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
+        <footer class="page-footer orange">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Conclusion</h5>
+                        <p class="grey-text text-lighten-4">In conclusion javascript is a very diverse, simple language that can be used for websites or serverside scripts. </p>
 
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Made by Tridtan Frederick
+                </div>
+            </div>
+        </footer>
         </div>
-      </div>
-
-    </div>
-    <br><br>
-  </div>
-
-  <footer class="page-footer orange">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
-
-
+        <div id="secondWindow">
+            <img src="javascript_logo.png" alt="">
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
-    </div>
-  </footer>
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script src="Js/script.js"></script>
+        <script src="Js/smoothS.js"></script>
+        
 
+</body>
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script src="Js/script.js"></script>
-
-  </body>
 </html>

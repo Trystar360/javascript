@@ -24,6 +24,15 @@
   position: relative;
 }
 
-#facts{
+#other{
   position: relative;
+}
+
+#secondWindow{
+  opacity: 0;
+  display: none;
+}
+
+#hidden{
+  display: none;
 }

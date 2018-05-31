@@ -31,15 +31,45 @@ function map (num, in_min, in_max, out_min, out_max) {
         document.getElementById("jsImg").style.transform = "rotate("+ pos +"deg)";
         //console.log(elmnt.clientHeight);
 
-        var uses = map(getScroll(),0,300,365,0);
-        if(uses < 0)
-        uses = 0;
-        document.getElementById("uses").style.left = uses + "px";
+        var boxs = map(getScroll(),0,300,365,0);
+        if(boxs < 0)
+        boxs = 0;
+
+        document.getElementById("uses").style.left = boxs + "px";
         document.getElementById("uses").style.opacity = opacity;
 
-        var facts = map(getScroll(),0,200,200,0);
-        if(facts < 0)
-        facts = 0;
-        document.getElementById("facts").style.right = uses + "px";
-        document.getElementById("facts").style.opacity = opacity;
+        document.getElementById("other").style.right = boxs + "px";
+        document.getElementById("other").style.opacity = opacity;
    }
+
+   function clicked(){
+     smoothScroll("other")
+   }
+
+function fade(){
+    $("#mainBod").animate({
+        opacity: 0,
+        }, 2000);
+    $("#mainBod").fadeTo(1000,0);
+    
+
+    $("#secondWindow").animate({
+        opacity: 1,
+        width: "1000px",
+        height: "auto"
+    })
+    $("#secondWindow").fadeTo(1000,1);
+
+}
+
+var hidden = false;
+function unhide(){
+  hidden = !hidden;
+
+  if(hidden){
+    document.getElementById("hidden").style.display = "block"
+  }else{
+    document.getElementById("hidden").style.display = "none"
+  }
+  smoothScroll("hidden")
+}
